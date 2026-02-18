@@ -1,0 +1,65 @@
+{
+  "unitManagement": {
+    "status": "pending",
+    "description": "Dashboard to add, view, and archive units by semester",
+    "tasks": [
+      "Unit list/grid view with colour-coded cards",
+      "Add unit form (code, name, semester, colour)",
+      "Archive / restore unit toggle",
+      "Semester selector / filter"
+    ]
+  },
+  "contentStorage": {
+    "status": "pending",
+    "description": "Drag-and-drop file uploads and Google Drive API integration",
+    "tasks": [
+      "File upload UI with drag-and-drop zone",
+      "Week-based content grouping (Week 1–12)",
+      "Google Drive OAuth flow",
+      "Drive folder sync (list + pull files)"
+    ]
+  },
+  "aiLearning": {
+    "status": "pending",
+    "description": "Gemini / Claude API – summarise PDFs and generate MCQs",
+    "tasks": [
+      "PDF text extraction",
+      "AI summary generation per content item",
+      "MCQ auto-generation from summary",
+      "Concept card creation from AI output"
+    ]
+  },
+  "srsScheduler": {
+    "status": "pending",
+    "description": "SM-2 spaced repetition scheduler with Google Calendar sync",
+    "tasks": [
+      "Review queue UI (due today)",
+      "SM-2 review flow with grade input (0–5)",
+      "Review session logging",
+      "Google Calendar event creation for scheduled reviews"
+    ]
+  },
+  "dashboardUI": {
+    "status": "in_progress",
+    "description": "Main dashboard with unit cards, SRS queue summary, and quick actions",
+    "tasks": [
+      "Placeholder page ✓",
+      "Unit summary cards",
+      "Due-review count badge",
+      "Quick-add unit button",
+      "Navigation sidebar"
+    ]
+  },
+  "initialization": {
+    "status": "complete",
+    "description": "Project scaffolding, Prisma schema, directory structure",
+    "tasks": [
+      "Next.js 16 App Router scaffold ✓",
+      "Prisma 7 + SQLite schema ✓",
+      "SM-2 algorithm module ✓",
+      "Mock AuthContext ✓",
+      "Shadcn/UI config ✓",
+      "Type definitions ✓"
+    ]
+  }
+}
