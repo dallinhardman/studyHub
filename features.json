@@ -25,13 +25,14 @@
     ]
   },
   "unitManagement": {
-    "status": "pending",
-    "description": "Unit detail page with week topics, content list, and concept management",
+    "status": "complete",
+    "description": "Unit detail page with week topics and concept management",
     "tasks": [
-      "Unit detail page /units/[id]",
-      "Week topic CRUD",
-      "Concept (flashcard) CRUD inside a week topic",
-      "Unit settings (rename, colour, delete)"
+      "Unit detail page /units/[id] ✓",
+      "Week topic CRUD (add, collapse/expand, delete) ✓",
+      "Concept (flashcard) CRUD inside a week topic ✓",
+      "Edit unit dialog (rename code, name, colour) ✓",
+      "Units layout with shared AppSidebar ✓"
     ]
   },
   "contentStorage": {
