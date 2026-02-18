@@ -1,12 +1,37 @@
 {
+  "initialization": {
+    "status": "complete",
+    "description": "Project scaffolding, Prisma schema, directory structure",
+    "tasks": [
+      "Next.js 16 App Router scaffold ✓",
+      "Prisma 7 + SQLite schema ✓",
+      "SM-2 algorithm module ✓",
+      "Mock AuthContext ✓",
+      "Shadcn/UI config ✓",
+      "Type definitions ✓"
+    ]
+  },
+  "dashboardUI": {
+    "status": "complete",
+    "description": "Main dashboard with sidebar, unit cards, semester selector, and add-unit dialog",
+    "tasks": [
+      "App sidebar with nav + user avatar ✓",
+      "Unit cards with colour accent, topic/quiz counts ✓",
+      "Add unit dialog (code, name, colour, semester) ✓",
+      "Semester selector (URL-based) ✓",
+      "Archive / restore toggle per card ✓",
+      "Empty state with inline add-unit ✓",
+      "Root redirect → /dashboard ✓"
+    ]
+  },
   "unitManagement": {
     "status": "pending",
-    "description": "Dashboard to add, view, and archive units by semester",
+    "description": "Unit detail page with week topics, content list, and concept management",
     "tasks": [
-      "Unit list/grid view with colour-coded cards",
-      "Add unit form (code, name, semester, colour)",
-      "Archive / restore unit toggle",
-      "Semester selector / filter"
+      "Unit detail page /units/[id]",
+      "Week topic CRUD",
+      "Concept (flashcard) CRUD inside a week topic",
+      "Unit settings (rename, colour, delete)"
     ]
   },
   "contentStorage": {
@@ -37,29 +62,6 @@
       "SM-2 review flow with grade input (0–5)",
       "Review session logging",
       "Google Calendar event creation for scheduled reviews"
-    ]
-  },
-  "dashboardUI": {
-    "status": "in_progress",
-    "description": "Main dashboard with unit cards, SRS queue summary, and quick actions",
-    "tasks": [
-      "Placeholder page ✓",
-      "Unit summary cards",
-      "Due-review count badge",
-      "Quick-add unit button",
-      "Navigation sidebar"
-    ]
-  },
-  "initialization": {
-    "status": "complete",
-    "description": "Project scaffolding, Prisma schema, directory structure",
-    "tasks": [
-      "Next.js 16 App Router scaffold ✓",
-      "Prisma 7 + SQLite schema ✓",
-      "SM-2 algorithm module ✓",
-      "Mock AuthContext ✓",
-      "Shadcn/UI config ✓",
-      "Type definitions ✓"
     ]
   }
 }
