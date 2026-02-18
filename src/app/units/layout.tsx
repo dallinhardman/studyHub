@@ -1,14 +1,9 @@
-import { AppSidebar } from "@/components/sidebar"
+import { AppShell } from "@/components/app-shell"
 
 export default function UnitsLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <div className="flex h-screen overflow-hidden">
-      <AppSidebar />
-      <main className="flex-1 overflow-y-auto bg-background">{children}</main>
-    </div>
-  )
+  return <AppShell>{children}</AppShell>
 }

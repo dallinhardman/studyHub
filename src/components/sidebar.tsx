@@ -24,7 +24,11 @@ const navItems = [
   { href: "/schedule", label: "Schedule", icon: CalendarDays },
 ]
 
-export function AppSidebar() {
+interface AppSidebarProps {
+  dueCount?: number
+}
+
+export function AppSidebar({ dueCount = 0 }: AppSidebarProps) {
   const pathname = usePathname()
   const { user } = useAuth()
 
@@ -66,6 +70,11 @@ export function AppSidebar() {
                 >
                   <Icon className="h-4 w-4 shrink-0" />
                   {label}
+                  {href === "/study" && dueCount > 0 && (
+                    <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1.5 text-[10px] font-semibold text-primary-foreground">
+                      {dueCount > 99 ? "99+" : dueCount}
+                    </span>
+                  )}
                 </Link>
               </li>
             )

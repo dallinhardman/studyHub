@@ -56,13 +56,17 @@
     ]
   },
   "srsScheduler": {
-    "status": "pending",
-    "description": "SM-2 spaced repetition scheduler with Google Calendar sync",
+    "status": "complete",
+    "description": "SM-2 spaced repetition scheduler with review queue and session logging",
     "tasks": [
-      "Review queue UI (due today)",
-      "SM-2 review flow with grade input (0–5)",
-      "Review session logging",
-      "Google Calendar event creation for scheduled reviews"
+      "Review queue page /study with due-today concepts ✓",
+      "Flashcard flip + grade (0–5) review flow ✓",
+      "SM-2 algorithm applied on each grade submission ✓",
+      "Review session + log persisted to DB ✓",
+      "Session summary (accuracy, avg grade, correct/incorrect) ✓",
+      "Due-count badge on sidebar Study nav item ✓",
+      "AppShell server component (shared sidebar with live due count) ✓",
+      "Google Calendar sync (deferred to integration phase)"
     ]
   }
 }
