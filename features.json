@@ -36,13 +36,18 @@
     ]
   },
   "contentStorage": {
-    "status": "pending",
-    "description": "Drag-and-drop file uploads and Google Drive API integration",
+    "status": "complete",
+    "description": "Drag-and-drop file uploads with week-based grouping",
     "tasks": [
-      "File upload UI with drag-and-drop zone",
-      "Week-based content grouping (Week 1–12)",
-      "Google Drive OAuth flow",
-      "Drive folder sync (list + pull files)"
+      "File upload dialog with drag-and-drop zone ✓",
+      "Title, type (Lecture/Tutorial/Reading/Assignment/Other), week picker ✓",
+      "Files saved to /uploads/<weekTopicId>/ on disk ✓",
+      "Served via /api/uploads/[...path] route with MIME detection ✓",
+      "Week-based content grouping with accordion UI ✓",
+      "File type icons (PDF, image, video, audio, generic) ✓",
+      "Delete with disk cleanup ✓",
+      "Shadcn Accordion component added ✓",
+      "Google Drive OAuth sync (deferred to integration phase)"
     ]
   },
   "aiLearning": {
