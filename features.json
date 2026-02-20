@@ -51,13 +51,16 @@
     ]
   },
   "aiLearning": {
-    "status": "pending",
-    "description": "Gemini / Claude API – summarise PDFs and generate MCQs",
+    "status": "complete",
+    "description": "Gemini / Claude API – summarise PDFs and generate MCQs + flashcards",
     "tasks": [
-      "PDF text extraction",
-      "AI summary generation per content item",
-      "MCQ auto-generation from summary",
-      "Concept card creation from AI output"
+      "PDF + TXT/MD text extraction via pdf-parse ✓",
+      "AI summary generation (bullet points) stored on Content.aiSummary ✓",
+      "MCQ quiz auto-generation (5 Qs) → Quiz + QuizQuestion records ✓",
+      "Flashcard auto-generation (5 cards) → Concept records added to SRS queue ✓",
+      "Gemini-first / Claude-fallback AI client in src/lib/ai-client.ts ✓",
+      "AI panel UI per content item (expand/collapse, status feedback) ✓",
+      "Summary preview rendered inline in content list ✓"
     ]
   },
   "srsScheduler": {

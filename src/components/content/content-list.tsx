@@ -10,6 +10,7 @@ import {
   Trash2,
   ExternalLink,
 } from "lucide-react"
+import { AIPanel } from "@/components/content/ai-panel"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -135,39 +136,44 @@ export function ContentList({ units }: ContentListProps) {
                   </AccordionTrigger>
 
                   <AccordionContent className="pb-3">
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {week.items.map((item) => (
-                        <li
-                          key={item.id}
-                          className="flex items-center gap-3 rounded-md p-2 hover:bg-muted/50"
-                        >
-                          <FileIcon mimeType={item.mimeType} />
+                        <li key={item.id} className="rounded-md p-2 hover:bg-muted/50">
+                          <div className="flex items-center gap-3">
+                            <FileIcon mimeType={item.mimeType} />
 
-                          <div className="min-w-0 flex-1">
-                            <p className="truncate text-sm font-medium">{item.title}</p>
-                            <p className="text-xs text-muted-foreground">
-                              {formatDate(item.uploadedAt)}
-                            </p>
+                            <div className="min-w-0 flex-1">
+                              <p className="truncate text-sm font-medium">{item.title}</p>
+                              <p className="text-xs text-muted-foreground">
+                                {formatDate(item.uploadedAt)}
+                              </p>
+                            </div>
+
+                            <Badge
+                              className={`border-0 text-[10px] shrink-0 ${typeBadge[item.type as ContentType]}`}
+                            >
+                              {typeLabel[item.type as ContentType]}
+                            </Badge>
+
+                            {item.fileUrl && (
+                              <a
+                                href={item.fileUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-muted-foreground hover:text-foreground"
+                              >
+                                <ExternalLink className="h-3.5 w-3.5" />
+                              </a>
+                            )}
+
+                            <DeleteButton id={item.id} />
                           </div>
 
-                          <Badge
-                            className={`border-0 text-[10px] shrink-0 ${typeBadge[item.type as ContentType]}`}
-                          >
-                            {typeLabel[item.type as ContentType]}
-                          </Badge>
-
-                          {item.fileUrl && (
-                            <a
-                              href={item.fileUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-muted-foreground hover:text-foreground"
-                            >
-                              <ExternalLink className="h-3.5 w-3.5" />
-                            </a>
-                          )}
-
-                          <DeleteButton id={item.id} />
+                          <AIPanel
+                            contentId={item.id}
+                            initialSummary={item.aiSummary}
+                            mimeType={item.mimeType}
+                          />
                         </li>
                       ))}
                     </ul>
